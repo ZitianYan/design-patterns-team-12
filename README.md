@@ -1,1 +1,0 @@
-# design-patterns-team-12
