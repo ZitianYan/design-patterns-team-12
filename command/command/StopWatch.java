@@ -1,10 +1,15 @@
 package command;
 
 import java.util.concurrent.TimeUnit;
-
+/**
+ * A class that creates a stop watch
+ * @author Logan Munn
+ */
 public class StopWatch {
     public StopWatch(){};
-
+    /**
+     * A method that counts down one minute 
+     */
     public void  countDownOneMin(){
         int minutes = 0;
         int seconds = 59;
@@ -24,7 +29,9 @@ public class StopWatch {
             
 
     }
-
+    /**
+     * A method that counts down five minutes
+     */
     public void  countDownFiveMin(){
         int minutes = 4;
         int seconds = 59;
@@ -45,7 +52,9 @@ public class StopWatch {
             System.out.flush();
 
     }
-
+    /**
+     * A method that counts down thirty seconds
+     */
     public void  countDownThirtySec(){
         int minutes = 0;
         int seconds = 29;
