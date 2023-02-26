@@ -6,17 +6,18 @@ public class StopWatch {
     public StopWatch(){};
 
     public void  countDownOneMin(){
-        int i = 60;
-        
-        while (i > 0) {
-            System.err.println(i);
+        int minutes = 0;
+        int seconds = 59;
+        while (seconds != 0) {
+            System.err.println("0"+minutes+":"+seconds);
             try {
                 TimeUnit.MILLISECONDS.sleep(1000);
             } catch (InterruptedException e) {
-            
-            e.printStackTrace();
+                e.printStackTrace();
             }
-            i--;
+            if(seconds != 0){
+                seconds--;
+            }
             }
             System.out.print("\033[H\033[2J");
             System.out.flush();
@@ -25,17 +26,20 @@ public class StopWatch {
     }
 
     public void  countDownFiveMin(){
-        int i = 300;
-        
-        while (i > 0) {
-            System.err.println(i);
+        int minutes = 4;
+        int seconds = 59;
+        while (minutes != 0 && seconds != 0) {
+            System.err.println("0"+minutes+":"+seconds);
             try {
                 TimeUnit.MILLISECONDS.sleep(1000);
             } catch (InterruptedException e) {
-            
-            e.printStackTrace();
+                e.printStackTrace();
             }
-            i--;
+            seconds--;
+            if(seconds == 0 && minutes != 0){
+                minutes--;
+                seconds = 59;
+            }
             }
             System.out.print("\033[H\033[2J");
             System.out.flush();
@@ -43,16 +47,18 @@ public class StopWatch {
     }
 
     public void  countDownThirtySec(){
-        int i = 30;
-        while (i > 0) {
-            System.err.println(i);
+        int minutes = 0;
+        int seconds = 29;
+        while (seconds != 0) {
+            System.err.println("0"+minutes+":"+seconds);
             try {
                 TimeUnit.MILLISECONDS.sleep(1000);
             } catch (InterruptedException e) {
-            
-            e.printStackTrace();
+                e.printStackTrace();
             }
-            i--;
+            if(seconds != 0){
+                seconds--;
+            }
             }
             System.out.print("\033[H\033[2J");
             System.out.flush();
